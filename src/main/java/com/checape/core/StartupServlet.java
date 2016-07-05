@@ -44,6 +44,7 @@ public class StartupServlet extends HttpServlet
 		catch (Exception e) {
 			// The registry would be destroyed by the SessionFactory, but we had trouble building the SessionFactory
 			// so destroy it manually.
+			e.printStackTrace();
 			StandardServiceRegistryBuilder.destroy( registry );
 		}
 	}
