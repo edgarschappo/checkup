@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="checape-core:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="core-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="checape-core:war exploded" />
-    </root>
-  </artifact>
-</component>
