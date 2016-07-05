@@ -1,18 +1,42 @@
 package com.checape.core;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.core.Response;
+import com.checape.core.rest.EntryPointInterface;
+import com.checape.core.rest.EntryPoint;
+import org.reflections.Reflections;
 
-@Path("/")
-public class Core
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.ws.rs.ApplicationPath;;
+import javax.ws.rs.core.Application;
+import java.util.HashSet;
+import java.util.Set;
+
+@ApplicationPath("/api")
+public class Core extends Application
 {
-	@GET
-	public Response info(){
-		String teste = "";
+	@Inject
+	Reflections reflections;
 
-		teste = "Olá munto!";
+	@Inject
+	EntityManager entityManager;
 
-		return Response.ok(teste).build();
+	@Override
+	public Set<Class<?>> getClasses()
+	{
+		Set<Class<?>> classes = new HashSet<>();
+		//classes.add(EntryPoint.class);
+		classes = getClassesByReflection();
+		return classes;
+	}
+
+	private Set<Class<?>> getClassesByReflection()
+	{
+		Set<Class<?>> classes = new HashSet<>();
+		Set<Class<? extends EntryPointInterface>> entityClasses = reflections.getSubTypesOf(EntryPointInterface.class);
+		for(Class c : entityClasses)
+		{
+			classes.add(c);
+		}
+		return classes;
 	}
 }
