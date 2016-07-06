@@ -1,31 +1,16 @@
 package com.checape.core.entity;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 
 @Entity
-@Table(name="role")
+@Table(name="role", schema = "public")
 public class RoleEntity extends AbstractEntity<Long>
 {
-	@Id
-	@GeneratedValue(strategy= GenerationType.AUTO)
-	private Long id;
 	private String code;
 	private String name;
 
-	@ManyToMany
-	@JoinTable(name = "Role_users")
-	private List<UserEntity> users;
-
-	public Long getId()
-	{
-		return id;
-	}
-
-	public void setId(Long id)
-	{
-		this.id = id;
-	}
+	private Set<UserEntity> users;
 
 	public String getCode()
 	{
@@ -45,5 +30,16 @@ public class RoleEntity extends AbstractEntity<Long>
 	public void setName(String name)
 	{
 		this.name = name;
+	}
+
+	@ManyToMany(mappedBy = "role")
+	public Set<UserEntity> getUsers()
+	{
+		return users;
+	}
+
+	public void setUsers(Set<UserEntity> users)
+	{
+		this.users = users;
 	}
 }
