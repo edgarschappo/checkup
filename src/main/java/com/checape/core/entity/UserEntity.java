@@ -1,6 +1,7 @@
 package com.checape.core.entity;
 
 import javax.persistence.*;
+
 import java.util.Set;
 
 @Entity
@@ -9,9 +10,30 @@ public class UserEntity extends AbstractEntity<Long>
 {
 	private String code;
 	private String name;
-	private String email;
-	private String password;
+	private String password;	
+	private String email;	
+	private Set<PhoneEntity> phones;
+	//Um medico pode trabalhar em mais de uma clinica
+	private Set<CompanyEntity> company;
 	private boolean active;
+	
+	@OneToMany
+	public Set<PhoneEntity> getPhones() {
+		return phones;
+	}
+
+	public void setPhones(Set<PhoneEntity> phones) {
+		this.phones = phones;
+	}
+
+	@ManyToMany
+	public Set<CompanyEntity> getCompany() {
+		return company;
+	}
+
+	public void setCompany(Set<CompanyEntity> company) {
+		this.company = company;
+	}
 
 	private Set<RoleEntity> role;
 

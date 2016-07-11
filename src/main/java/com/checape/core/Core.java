@@ -6,7 +6,7 @@ import org.reflections.Reflections;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.ws.rs.ApplicationPath;;
+import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import java.util.HashSet;
 import java.util.Set;
