@@ -7,4 +7,5 @@ import org.apache.deltaspike.data.api.Repository;
 @Repository(forEntity = RoleEntity.class)
 public interface RoleRepository extends EntityRepository<RoleEntity, Long>
 {
+	public RoleEntity findByCode(String code);
 }

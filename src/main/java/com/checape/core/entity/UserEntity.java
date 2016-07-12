@@ -1,7 +1,16 @@
 package com.checape.core.entity;
 
-import javax.persistence.*;
+import org.hibernate.search.annotations.Field;
+import org.hibernate.search.annotations.Index;
+import org.hibernate.search.annotations.Indexed;
+import org.hibernate.search.annotations.Store;
 
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
 import java.util.Set;
 
 @Entity
@@ -47,6 +56,7 @@ public class UserEntity extends AbstractEntity<Long>
 		this.code = code;
 	}
 
+	@Field(index = Index.YES, store = Store.YES)
 	public String getName()
 	{
 		return name;
@@ -100,5 +110,17 @@ public class UserEntity extends AbstractEntity<Long>
 	public void setRole(Set<RoleEntity> role)
 	{
 		this.role = role;
+	}
+
+	public UserEntity (){}
+
+	public UserEntity (String code, String name, String password, String email, Set<PhoneEntity> phones, Set<CompanyEntity> company, boolean active){
+		this.code = code;
+		this.name = name;
+		this.password = password;
+		this.email = email;
+		this.phones = phones;
+		this.company = company;
+		this.active = active;
 	}
 }
