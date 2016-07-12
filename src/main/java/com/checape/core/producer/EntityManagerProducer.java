@@ -19,8 +19,6 @@ public class EntityManagerProducer implements EntityManagerResolver
 	EntityManagerFactory emf;
 
 	@Produces
-	@Default
-	@RequestScoped
 	EntityManager ProducesEntityManager()
 	{
 		return this.emf.createEntityManager();

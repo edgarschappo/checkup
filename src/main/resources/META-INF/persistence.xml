@@ -3,7 +3,6 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
              version="2.0">
-    <!-- Configurações para o engine de persistência padrão do Fusion -->
     <persistence-unit name="com.checape.core" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
@@ -21,9 +20,14 @@
             <property name="hibernate.max_fetch_depth" value="0" />
             <property name="hibernate.connection.pool_size" value="200" />
             <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.hbm2ddl.index.auto" value="true" />
             <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.validator.apply_to_ddl" value="false" />
             <property name="hibernate.validator.autoregister_listeners" value="false" />
+
+            <!--  -->
+            <property name="hibernate.search.default.indexBase" value="C:\ambiente_hrs\index"/>
 
         </properties>
     </persistence-unit>

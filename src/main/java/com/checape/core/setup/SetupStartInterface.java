@@ -1,6 +1,6 @@
 package com.checape.core.setup;
 
-public interface SetupInterface
+public interface SetupStartInterface
 {
 	public void run();
 }
