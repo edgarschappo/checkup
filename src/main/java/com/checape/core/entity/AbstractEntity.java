@@ -9,7 +9,7 @@ public abstract class AbstractEntity <I extends Serializable>
 	protected I id;
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public I getId()
 	{
 		return id;

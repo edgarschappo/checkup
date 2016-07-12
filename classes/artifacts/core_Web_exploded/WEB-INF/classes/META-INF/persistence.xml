@@ -9,8 +9,8 @@
         <properties>
             <!--  PostgreSQL -->
             <property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
-            <property name="hibernate.connection.username" value="postgres" />
-            <property name="hibernate.connection.password" value="checape" />
+            <property name="hibernate.connection.username" value="checape" />
+            <property name="hibernate.connection.password" value="chp@123" />
             <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/checape" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect" />
 
@@ -21,7 +21,7 @@
             <property name="hibernate.max_fetch_depth" value="0" />
             <property name="hibernate.connection.pool_size" value="200" />
             <property name="hibernate.hbm2ddl.auto" value="update" />
-            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.show_sql" value="false" />
             <property name="hibernate.validator.apply_to_ddl" value="false" />
             <property name="hibernate.validator.autoregister_listeners" value="false" />
 

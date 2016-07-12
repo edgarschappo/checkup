@@ -1,6 +1,6 @@
 <web-app id="WebApp_ID" version="2.4"
 	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
 	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 	<display-name>resteasy-cdi</display-name>
 
@@ -13,5 +13,13 @@
     <listener>
         <listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
     </listener>
+    <filter>
+        <filter-name>ConversationPropagationFilter</filter-name>
+        <filter-class>org.jboss.weld.servlet.ConversationPropagationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ConversationPropagationFilter</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
 
 </web-app>

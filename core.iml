@@ -58,8 +58,8 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.deltaspike.modules:deltaspike-proxy-module-impl-asm5:1.7.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.deltaspike.modules:deltaspike-jpa-module-api:1.7.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.deltaspike.modules:deltaspike-jpa-module-impl:1.7.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.deltaspike.cdictrl:deltaspike-cdictrl-api:1.7.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.deltaspike.cdictrl:deltaspike-cdictrl-weld:1.7.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.deltaspike.cdictrl:deltaspike-cdictrl-api:1.7.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.deltaspike.cdictrl:deltaspike-cdictrl-weld:1.7.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.deltaspike.modules:deltaspike-servlet-module-api:1.7.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.deltaspike.modules:deltaspike-servlet-module-impl:1.7.0" level="project" />
     <orderEntry type="library" name="Maven: javax.transaction:jta:1.1" level="project" />

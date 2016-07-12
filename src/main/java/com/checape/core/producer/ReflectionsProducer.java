@@ -1,4 +1,4 @@
-package com.checape.core.produces;
+package com.checape.core.producer;
 
 import org.reflections.Reflections;
 
@@ -6,7 +6,7 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
 
 @ApplicationScoped
-public class ReflectionsProduces
+public class ReflectionsProducer
 {
 	Reflections reflections;
 
