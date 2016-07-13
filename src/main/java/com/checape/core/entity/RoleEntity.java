@@ -42,4 +42,12 @@ public class RoleEntity extends AbstractEntity<Long>
 	{
 		this.users = users;
 	}
+
+	public RoleEntity(){}
+
+	public RoleEntity(String code, String name)
+	{
+		this.code = code;
+		this.name = name;
+	}
 }

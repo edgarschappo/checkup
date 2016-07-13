@@ -5,4 +5,8 @@ import com.checape.core.repository.UserRepository;
 
 public class UserService extends AbstractService<Long, UserEntity, UserRepository> implements ServiceInterface<UserEntity, Long>
 {
+	public UserEntity findByCode(String code)
+	{
+		return repository.findByCode(code);
+	}
 }
