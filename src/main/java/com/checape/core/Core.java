@@ -4,7 +4,7 @@ import com.checape.core.rest.EntryPointInterface;
 
 import javax.enterprise.inject.Instance;
 import javax.inject.Inject;
-import javax.ws.rs.ApplicationPath;;
+import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import java.util.HashSet;
 import java.util.Iterator;

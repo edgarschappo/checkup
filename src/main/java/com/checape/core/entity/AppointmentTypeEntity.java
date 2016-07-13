@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "appointment", schema = "public")
+@Table(name = "appointmenttype", schema = "public")
 public class AppointmentTypeEntity extends AbstractEntity<Long>
 {
 	private String code;

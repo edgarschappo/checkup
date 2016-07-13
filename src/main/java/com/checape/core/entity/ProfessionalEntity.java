@@ -20,6 +20,7 @@ public class ProfessionalEntity extends AbstractEntity<Long>
 	//CRM, CRO, etc.
 	private AgencyEntity agency;
 	private UserEntity user;
+	private Set<ServiceConfig> serviceConfig;
 	private Set<AppointmentConfigEntity> appointmentConfig;	
 	private Set<EvaluationEntity> evaluation;
 
@@ -88,6 +89,15 @@ public class ProfessionalEntity extends AbstractEntity<Long>
 		this.user = user;
 	}
 	
+	@ManyToMany
+	public Set<ServiceConfig> getServiceConfig() {
+		return serviceConfig;
+	}
+
+	public void setServiceConfig(Set<ServiceConfig> serviceConfig) {
+		this.serviceConfig = serviceConfig;
+	}
+
 	@OneToMany
 	public Set<AppointmentConfigEntity> getAppointmentConfig() 
 	{

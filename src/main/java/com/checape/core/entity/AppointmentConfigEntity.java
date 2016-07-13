@@ -1,5 +1,6 @@
 package com.checape.core.entity;
 
+import java.sql.Time;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -13,24 +14,11 @@ import com.checape.core.entity.enums.DayOfWeek;
 @Table(name = "appointmentconfig", schema = "public")
 public class AppointmentConfigEntity extends AbstractEntity<Long>
 {
-	private SpecialityEntity speciality;
 	private DayOfWeek dayofweek;
-	private Set<PeriodOfDayEntity> periodofday;
-	//in minutes
-	private Long attendancetime;
+	private Time initialTime;
+	private Time finalTime;	
 	//Um medico pode trabalhar em mais de uma empresa
 	private CompanyEntity company;
-
-	@ManyToOne
-	public SpecialityEntity getSpeciality()
-	{
-		return speciality;
-	}
-	
-	public void setSpeciality(SpecialityEntity speciality)
-	{
-		this.speciality = speciality;
-	}
 	
 	public DayOfWeek getDayofweek()
 	{
@@ -42,25 +30,20 @@ public class AppointmentConfigEntity extends AbstractEntity<Long>
 		this.dayofweek = dayofweek;
 	}
 	
-	@OneToMany
-	public Set<PeriodOfDayEntity> getPeriodofday()
-	{
-		return periodofday;
+	public Time getInitialTime() {
+		return initialTime;
 	}
 
-	public void setPeriodofday(Set<PeriodOfDayEntity> periodofday)
-	{
-		this.periodofday = periodofday;
+	public void setInitialTime(Time initialTime) {
+		this.initialTime = initialTime;
 	}
 
-	public Long getAttendancetime()
-	{
-		return attendancetime;
+	public Time getFinalTime() {
+		return finalTime;
 	}
-	
-	public void setAttendancetime(Long attendancetime)
-	{
-		this.attendancetime = attendancetime;
+
+	public void setFinalTime(Time finalTime) {
+		this.finalTime = finalTime;
 	}
 	
 	@ManyToOne

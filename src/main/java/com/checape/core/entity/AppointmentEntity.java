@@ -21,6 +21,7 @@ public class AppointmentEntity extends AbstractEntity<Long>
 	private AppointmentTypeEntity appointmentType;
 	private CompanyEntity company;
 	private ProfessionalEntity professional;
+	private GregorianCalendar untilDate;
 	
 	public GregorianCalendar getAppointmentDate()
 	{
@@ -104,5 +105,15 @@ public class AppointmentEntity extends AbstractEntity<Long>
 	public void setProfessional(ProfessionalEntity professional) 
 	{
 		this.professional = professional;
+	}
+
+	public GregorianCalendar getUntilDate() 
+	{
+		return untilDate;
+	}
+
+	public void setUntilDate(GregorianCalendar untilDate) 
+	{
+		this.untilDate = untilDate;
 	}
 }
