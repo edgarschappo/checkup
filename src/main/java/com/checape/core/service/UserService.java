@@ -1,5 +1,7 @@
 package com.checape.core.service;
 
+import org.apache.deltaspike.data.impl.meta.NonEntityException;
+
 import com.checape.core.entity.UserEntity;
 import com.checape.core.repository.UserRepository;
 
@@ -7,6 +9,13 @@ public class UserService extends AbstractService<Long, UserEntity, UserRepositor
 {
 	public UserEntity findByCode(String code)
 	{
-		return repository.findByCode(code);
+		try
+		{
+			return repository.findByCode(code);
+		}
+		catch(NonEntityException e)
+		{
+			return null;
+		}
 	}
 }
