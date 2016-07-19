@@ -1,5 +1,7 @@
 package com.checape.core.service;
 
+import javax.persistence.NoResultException;
+
 import org.apache.deltaspike.data.impl.meta.NonEntityException;
 
 import com.checape.core.entity.UserEntity;
@@ -13,7 +15,11 @@ public class UserService extends AbstractService<Long, UserEntity, UserRepositor
 		{
 			return repository.findByCode(code);
 		}
-		catch(NonEntityException e)
+		catch(NoResultException nre)
+		{
+			return null;
+		}
+		catch(NonEntityException nee)
 		{
 			return null;
 		}

@@ -29,7 +29,7 @@ public abstract class AbstractService<I extends Serializable, E extends Abstract
 
 	public E create(E entity)
 	{
-		return repository.save(entity);
+		return repository.saveAndFlush(entity);
 	}
 
 	public E update(E entity)

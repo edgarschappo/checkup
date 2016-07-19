@@ -8,10 +8,9 @@ import javax.persistence.Table;
 @Table(name = "city", schema = "public")
 public class CityEntity extends AbstractEntity<Long> 
 {
+	private String code;
 	private String name;
-	private StateEntity state;
-	private Long initialZipCode;
-	private Long finalZipCode;
+	private StateEntity state;	
 	
 	public String getName() 
 	{
@@ -28,29 +27,19 @@ public class CityEntity extends AbstractEntity<Long>
 	{
 		return state;
 	}
-		
+	
 	public void setState(StateEntity state) 
 	{
 		this.state = state;
 	}
-	
-	public Long getInitialZipCode() 
+
+	public String getCode() 
 	{
-		return initialZipCode;
+		return code;
 	}
-	
-	public void setInitialZipCode(Long initialZipCode) 
+
+	public void setCode(String code) 
 	{
-		this.initialZipCode = initialZipCode;
-	}
-	
-	public Long getFinalZipCode() 
-	{
-		return finalZipCode;
-	}
-	
-	public void setFinalZipCode(Long finalZipCode) 
-	{
-		this.finalZipCode = finalZipCode;
+		this.code = code;
 	}	
 }

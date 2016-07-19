@@ -15,6 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <deltaspike.version>1.7.0</deltaspike.version>
 		<gson.version>2.7</gson.version>
+		<axis.version>1.4</axis.version>
 		<hibernate-version>5.2.1.Final</hibernate-version>
         <hibernate-search-version>5.5.4.Final</hibernate-search-version>
 		<jwt.version>0.6.0</jwt.version>
@@ -220,12 +221,18 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>${servlet-api.version}</version>
         </dependency>
-
+        
+		 <!-- UTILS -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${gson.version}</version>
-        </dependency>
+        </dependency>        
+        <dependency>
+			<groupId>axis</groupId>
+			<artifactId>axis</artifactId>
+			<version>${axis.version}</version>
+		</dependency>
 
         <dependency>
             <groupId>org.reflections</groupId>
