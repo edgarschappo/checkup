@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<states>
+	<state id="01" country="BRA" code="AC" name="Acre" />
+	<state id="02" country="BRA" code="AL" name="Alagoas" />
+	<state id="03" country="BRA" code="AP" name="Amapá" />
+	<state id="04" country="BRA" code="AM" name="Amazonas" />
+	<state id="05" country="BRA" code="BA" name="Bahia" />
+	<state id="06" country="BRA" code="CE" name="Ceará" />
+	<state id="07" country="BRA" code="DF" name="Distrito Federal" />
+	<state id="08" country="BRA" code="ES" name="Espírito Santo" />
+	<state id="09" country="BRA" code="GO" name="Goiás" />
+	<state id="10" country="BRA" code="MA" name="Maranhão" />
+	<state id="11" country="BRA" code="MT" name="Mato Grosso" />
+	<state id="12" country="BRA" code="MS" name="Mato Grosso do Sul" />
+	<state id="13" country="BRA" code="MG" name="Minas Gerais" />
+	<state id="14" country="BRA" code="PA" name="Pará" />
+	<state id="15" country="BRA" code="PB" name="Paraíba" />
+	<state id="16" country="BRA" code="PR" name="Paraná" />
+	<state id="17" country="BRA" code="PE" name="Pernambuco" />
+	<state id="18" country="BRA" code="PI" name="Piauí" />
+	<state id="19" country="BRA" code="RJ" name="Rio de Janeiro" />
+	<state id="20" country="BRA" code="RN" name="Rio Grande do Norte" />
+	<state id="21" country="BRA" code="RS" name="Rio Grande do Sul" />
+	<state id="22" country="BRA" code="RO" name="Rondônia" />
+	<state id="23" country="BRA" code="RR" name="Roraima" />
+	<state id="24" country="BRA" code="SC" name="Santa Catarina" />
+	<state id="25" country="BRA" code="SP" name="São Paulo" />
+	<state id="26" country="BRA" code="SE" name="Sergipe" />
+	<state id="27" country="BRA" code="TO" name="Tocantins" />
+</states>
